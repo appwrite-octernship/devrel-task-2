@@ -1,0 +1,41 @@
+{
+    "projectId": "642182779f8f3e2f3d64",
+    "projectName": "appwrite-notes-app",
+    "functions": [
+        {
+            "$id": "642196a43f00acdca7dc",
+            "name": "add-to-meilisearch",
+            "runtime": "node-16.0",
+            "path": "functions/add-to-meilisearch",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [],
+            "events": [
+                "databases.*.collections.*.documents.*.create",
+                "databases.*.collections.*.documents.*.update"
+            ],
+            "schedule": "",
+            "timeout": 15
+        },
+        {
+            "$id": "6421a27fcfed40b0a122",
+            "name": "delete-from-meilisearch",
+            "runtime": "node-16.0",
+            "path": "functions/delete-from-meilisearch",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [],
+            "events": [
+                "databases.*.collections.*.documents.*.delete"
+            ],
+            "schedule": "",
+            "timeout": 15
+        }
+    ]
+}
